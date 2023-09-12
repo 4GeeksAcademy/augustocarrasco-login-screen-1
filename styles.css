@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color:white;
+    font-family: Roboto;
+    overflow:hidden;
+}
+hr {
+    width:100%;
+}
+.img1 {
+    position:absolute;
+    bottom:0;
+    display:flex;
+    object-fit: cover;
+    flex-direction: row-reverse;
+    justify-content :end;
+    height: 60vh;
+    width: 100%;
+    
+}
+.img1an {
+    animation: img1out 2s ease 1 0s forwards;
+}
+@keyframes img1out {
+    0% {
+        scale: 1;
+        }
+    100% {scale: 0;
+        translate: 1000px 500px;}
+}
+.img1ran {
+    animation: img1in 2s ease 1 0s forwards;
+}
+@keyframes img1in {
+    0% {
+        scale: 0;
+        translate: 1000px 500px;
+        }
+    100% {scale: 1;
+        translate: 0px 0px
+        }
+}
+
+.img2 {
+    position:absolute;
+    top:-1000px;
+    left: -1000px;;
+    display:flex;
+    object-fit: cover;
+    flex-direction: row;
+    justify-content :left;
+    height: 60vh;
+    width: 100%;
+    scale:0;
+}
+
+.img2an {
+    animation: img2in 2s ease 1 0s forwards;
+}
+@keyframes img2in {
+    0% {
+        scale: 0;
+        }
+    100% {  scale: 1;
+            translate: 1000px 1000px;}
+}
+.imagen2 {
+    border-bottom-right-radius: 100%;
+}
+.imagen1 {
+    border-top-left-radius: 100%;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position:relative
+}
+
+.ver {
+    display: flex;
+    flex-direction: column;
+}
+
+.rect1,.rect2,.rect3,.rect4,.rect5,.rect6 {
+    background-color: rgb(34, 78, 145);
+}
+
+.rect1 {
+    top:15%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.rect2 {
+    top:0;
+    left: 10%;
+    width: 10px;
+    height: 100%;
+}
+.rect3 {
+    top:15%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.rect4 {
+    top:0;
+    left: 10%;
+    width: 10px;
+    height: 100%;
+}
+.rect5 {
+    top:85%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.rect6 {
+    top:0;
+    left: 90%;
+    width: 10px;
+    height: 100%;
+}
+.card2 {
+    top: calc(100% - 250px);
+    left: calc(100% - 350px);
+    background-color: rgba(83, 48, 236,0.95);
+    border-radius: 5px;
+    padding:10px;
+    width: 300px;
+    height: 200px;
+    visibility: hidden;
+    
+    box-shadow: 0 0 10px gray;  
+    
+}
+.card1 {
+    top: 10%;
+    left: 8%;
+    background-color: rgba(83, 48, 236,0.95);
+    border-radius: 5px;
+    padding:10px;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px gray;    
+}
+.welcome {
+    top: calc(50% - 75px);
+    left: calc(50% - 150px);
+    background-color: rgba(83, 48, 236,0.95);
+    border-radius: 5px;
+    padding:10px;
+    width: 300px;
+    height: 150px;
+    text-align: center;    
+    box-shadow: 0 0 10px gray;      
+}
+.submit,.start {
+    display:flex;
+    margin:auto;
+    justify-content: center;
+}
+.start1:hover, .submit1:hover {
+    cursor:pointer
+}
+
+
+.view {
+    visibility: visible !important;
+}
+.nview {
+    visibility: hidden;
+}
+
+.foutc1 {
+    animation-name: card1; 
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card1 {
+    0% { opacity: 100%;;}
+    100% {
+        opacity: 0%;
+        top: calc(100% - 200px);
+        left: calc(100% - 350px);
+        visibility: hidden;}
+}
+.mdown {
+    animation-name: movedown;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
+}
+@keyframes movedown {
+    0% {}
+    100% {top:85%;}
+}
+.mup {
+    animation-name: moveup;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
+}
+@keyframes moveup {
+    0% {visibility: visible;}
+    100% {top:15%;
+        visibility: visible;}
+}
+
+.mright {
+    animation-name: moveright;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes moveright {
+    0% {}
+    100% {left: 90%;}
+}
+.mleft {
+    animation-name: moveleft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes moveleft {
+    0% {visibility: visible;}
+    100% {left: 10%;visibility: visible;}
+}
+
+
+/* .finc2 {
+    animation-name: card2; 
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+} */
+
+@keyframes card2 {
+    0% { visibility: visible;
+        opacity: 0%;}
+    100% {visibility: visible;
+        opacity: 100%;}
+}
+
+.finc22 {
+    animation: card2 2s ease 1.5s 1 forwards;
+}
+
+.finc222 {
+    animation: card22 2s ease 0s 1 forwards;
+}
+.finw {
+    animation: card2 2s ease 1.5s 1 forwards
+}
+
+@keyframes card22 {
+    0% { visibility: visible;
+        opacity: 100%;}
+    100% {visibility: hidden;
+        opacity: 0%;
+        top: calc(50% - 75px);
+        left: calc(50% - 150px);
+    }
+}
+
+.circle{
+    width:360px;
+    height:360px;
+    border:1px solid blue;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    margin:auto;
+    border-radius:50%; 
+    visibility: hidden;
+  }
+
+  .movingcircle{
+    width:30px;
+    height:30px;
+    background:rgba(83, 48, 236,0.95);
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    visibility: hidden;
+    box-shadow: 0px 0px 5px rgba(83, 48, 236,0.95);
+  }
+  .movingcircleanimation {
+    animation: circle 6s linear 3s infinite;
+  }
+
+  @keyframes circle {
+    0%{ visibility: visible;
+        background:rgba(83, 48, 236,0.95);
+        transform:rotate(0deg)
+                translate(-180px)
+                rotate(0deg);
+    }
+    20% {background:rgba(70, 236, 48, 0.95);}
+    40% {background:rgba(223, 236, 48, 0.95);}
+    60% {background:rgba(236, 139, 48, 0.95);}
+    80% {background:rgba(236, 48, 48, 0.95);}
+    
+    100%{visibility: visible;
+        background:rgba(83, 48, 236,0.95);
+        transform:rotate(360deg)
+                translate(-180px)
+                rotate(360deg);
+    }
+  }
